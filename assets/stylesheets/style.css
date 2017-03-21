@@ -34,43 +34,10 @@ body {
   box-shadow: 0 -20px #890067, 0 -40px #560041, 0 -60px #23001A;
 }
 
-@keyframes expand-dot {
-  from {
-    height: 0;
-  }
-  to {
-    height: calc(100% - 80px);
-  }
-}
-
 section {
-  animation-name: expand-content, show-content;
-  animation-delay: 2s, 3s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-@keyframes expand-content {
-  from {
-    height: 0;
-  }
-  to {
-    height: 11.9em;
-  }
-}
-
-@keyframes show-content {
-  from {
-    opacity: 0;
-    visibility: visible;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
+  height: 11.9em;
+  opacity: 1;
+  visibility: visible;
 }
 
 h1 {
@@ -78,29 +45,7 @@ h1 {
   font-size: inherit;
   margin: 0;
   margin-right: -3ch;
-  opacity: 0;
-  animation-name: fade-h1;
-  animation-delay: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fade-h1 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-h1 {
-  from {
-    margin-right: 5ch;
-  }
-  to {
-    
-  }
+  opacity: 1;
 }
 
 nav {
@@ -124,6 +69,10 @@ nav a:hover {
 .info {
   border-bottom: dotted 1px #222;
   cursor: pointer;
+}
+
+footer {
+  font-size: 10px;
 }
 
 @media only screen and (max-width: 580px) {
