@@ -9,15 +9,14 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>mcardle.io</h1>
+      <h1><span class="hidden-email">leo@</span>mcardle.io</h1>
       <section>
         <nav>
           <ul>
-            <li><a href="#">about</a></li>
-            &nbsp;&nbsp;
-            <li><a href="#">portfolio</a></li>
-            &nbsp;&nbsp;
-            <li><a href="mailto:leo@mcardle.io">contact</a>&nbsp;</li>
+            <li><a href="mailto:leo@mcardle.io"
+              onclick="document.querySelector('h1 .hidden-email').className = 'shown-email'"
+              onmouseover="document.querySelector('h1 .hidden-email').style.opacity = 1"
+              onmouseout="document.querySelector('h1 .hidden-email').style.opacity = 0">contact</a></li>
           </ul>
         </nav>
         <p>
@@ -25,10 +24,15 @@
           &nbsp;specialising in <span class="info" title="Forum software designed in and for the 21st century: http://discourse.org">discourse</span> development.
         </p>
         <p>
-          &nbsp;currently contracting for <span class="info" title="They make that browser, Firefox.">mozilla</span>.<br>
-          available for small pieces of work.
+          available for part time work from october
         </p>
       </section>
+      <footer>
+        <p>
+          mcardle io ltd. registered in england and wales: company number 10678652<br>
+          registered office address: saggar house, princes drive, worcester, england, wr1 2pg.
+        </p>
+      </footer>
     </div>
   </body>
 </html>
