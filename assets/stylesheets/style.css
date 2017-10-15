@@ -134,6 +134,8 @@ nav a:hover {
 }
 
 .info {
+  text-decoration: none;
+  color: inherit;
   border-bottom: dotted 1px #222;
   cursor: pointer;
 }
