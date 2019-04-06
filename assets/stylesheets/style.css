@@ -123,6 +123,10 @@ nav li {
   display: inline;
 }
 
+nav li:not(:last-child):after {
+  content: " • ";
+}
+
 nav a {
   text-decoration: none;
   color: inherit;
