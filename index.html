@@ -10,16 +10,19 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1><span class="hidden-email">leo@</span>mcardle.io</h1>
+      <h1>leo<span class="hidden-email invisible-email">@</span>mcardle<span class="hidden-email invisible-email">.io</span></h1>
+      <p>
+        full stack web developer
+      </p>
       <section>
         <nav>
           <ul>
             <li><a href="https://portfolio.mcardle.io">portfolio</a></li>
             <li><a href="https://www.linkedin.com/in/leomca/">linkedin</a></li>
             <li><a href="mailto:leo@mcardle.io"
-              onclick="document.querySelector('h1 .hidden-email').className = 'shown-email'"
-              onmouseover="document.querySelector('h1 .hidden-email').style.opacity = 1"
-              onmouseout="document.querySelector('h1 .hidden-email').style.opacity = 0">contact</a></li>
+              onclick="document.querySelectorAll('h1 .shown-email').forEach(x => x.style.opacity = 1)"
+              onmouseover="document.querySelectorAll('h1 .hidden-email').forEach(x => x.className = 'shown-email')"
+              onmouseout="document.querySelectorAll('h1 .shown-email').forEach(x => x.className = 'hidden-email')">contact</a></li>
           </ul>
         </nav>
       </section>

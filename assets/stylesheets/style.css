@@ -1,114 +1,42 @@
-html, body {
-  height: 100%;
+:root {
+  --font-size: 22px;
+  --baseline: 1.7em;
+  --primary: #400400;
 }
 
 body {
   font-family: "Source Code Pro", monospace;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 1.7em;
-  text-align: center;
-  color: #890067;
+  font-size: var(--font-size);
+  line-height: var(--baseline);
+  padding: var(--baseline);
+  color: var(--primary);
   cursor: default;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  align-content: center;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  animation-name: expand-stripes;
-  animation-duration: 1s;
-  overflow: hidden;
-  width: 100%;
-  height: calc(100% - 60px);
-  box-shadow: 0 -20px #890067, 0 -40px #560041, 0 -60px #23001A;
-}
-
-@keyframes expand-stripes {
-  from {
-    height: 100%;
-  }
-  to {
-    height: calc(100% - 60px);
-  }
-}
-
-section, footer {
-  animation-name: expand-content, show-content;
-  animation-delay: 2s, 3s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-}
-
-@keyframes expand-content {
-  from {
-    height: 0;
-  }
-  to {
-    height: 11.9em;
-  }
-}
-
-@keyframes show-content {
-  from {
-    opacity: 0;
-    visibility: visible;
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-  }
+p, ul, h1, h2, h3, h4, h5, h6 {
+  margin: var(--baseline) 0;
 }
 
 h1 {
   font-weight: 600;
   font-size: inherit;
   margin: 0;
-  margin-right: 1ch;
-  opacity: 0;
-  animation-name: fade-h1;
-  animation-delay: 1s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+}
 
+h1 .invisible-email {
+  /* fix weird chrome behaviour where opacity in .hidden-email would animate on page load */
+  visibility: hidden;
 }
 
 h1 .hidden-email {
   opacity: 0;
-  font-weight: 200;
-  transition: opacity 1s;
+  transition: opacity .5s;
 }
 
 h1 .shown-email {
   opacity: 1;
-  font-weight: 200;
-}
-
-@keyframes fade-h1 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slide-h1 {
-  from {
-    margin-right: 5ch;
-  }
-  to {
-
-  }
+  transition: opacity .5s;
 }
 
 nav {
@@ -120,11 +48,7 @@ nav ul {
 }
 
 nav li {
-  display: inline;
-}
-
-nav li:not(:last-child):after {
-  content: " • ";
+  list-style: none;
 }
 
 nav a {
@@ -135,17 +59,6 @@ nav a {
 
 nav a:hover {
   border-bottom: dotted 1px #22f;
-}
-
-.info {
-  text-decoration: none;
-  color: inherit;
-  border-bottom: dotted 1px #222;
-  cursor: pointer;
-}
-
-footer {
-  font-size: 8px;
 }
 
 @media only screen and (max-width: 580px) {
