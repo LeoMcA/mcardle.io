@@ -12,6 +12,7 @@ body {
   padding: var(--baseline);
   color: var(--primary);
   cursor: default;
+  text-transform: lowercase;
 }
 
 p, ul, h1, h2, h3, h4, h5, h6 {
